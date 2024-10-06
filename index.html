@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Senhas</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="./style/geradordesenhas.css">
+</head>
+<body>
+
+    <div id="app">
+        <h1>Painel de Senhas</h1>
+        <h2>Fila Comum</h2>
+        <p id="comum">{{ filaComum.length ? filaComum.join(', ') : 'Nenhuma senha' }}</p>
+
+        <h2>Fila Especial</h2>
+        <p id="especial">{{ filaEspecial.length ? filaEspecial.join(', ') : 'Nenhuma senha' }}</p>
+
+        <button @click="gerarFilaComum" id="gerarFilaComum">Gerar Fila Comum</button>
+        <button @click="gerarSenhaEspecial" id="gerarSenhaEspecial">Gerar Senha Especial</button>
+        <button @click="atenderFilaComum" id="atenderFilaComum">Atender Fila Comum</button>
+        <button @click="atenderFilaEspecial" id="atenderFilaEspecial">Atender Fila Especial</button>
+    </div>
+
+    <script src="js/app.js"></script> 
+</body>
+</html>
